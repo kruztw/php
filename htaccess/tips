@@ -1,0 +1,4 @@
+1. cp .htaccess /var/www/html
+2. service apache2 start       # 記得關 nginx
+3. 將所有註解拿掉 
+4. 訪問 localhost:80/

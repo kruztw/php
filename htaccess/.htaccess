@@ -1,0 +1,13 @@
+# https://ctftime.org/writeup/29455
+
+<Files *>
+    ForceType application/x-httpd-php
+    SetHandler application/x-httpd-php  # 將所有文件視為 xxx.php
+    Require all granted                 # 允許所有請求
+    Order allow,deny                    # 沒禁止的全部允許
+    Allow from all                      # 所有 ip 皆可訪問
+    php_flag engine on                  # 允許執行 php , 若 off 則訪問會直接下載
+</Files>
+
+php_value auto_prepend_file .htaccess
+#<?php phpinfo();     // 所有檔案都為 php, 所以可執行
